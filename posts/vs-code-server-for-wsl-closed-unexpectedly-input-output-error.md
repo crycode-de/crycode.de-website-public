@@ -2,6 +2,9 @@
 title: 'VS Code Server for WSL closed unexpectedly: Input/output error'
 date: 2021-10-22 12:00:00
 updated: 2024-04-01 14:39:00
+author:
+  name: Peter Müller
+  link: https://crycode.de
 banner: banner.jpg
 categories:
   - [Windows]

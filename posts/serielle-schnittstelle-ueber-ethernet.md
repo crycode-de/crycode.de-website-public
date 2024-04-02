@@ -2,6 +2,9 @@
 title: Serielle Schnittstelle über Ethernet
 date: 2022-01-10 12:00:00
 updated: 2024-03-31 16:00:00
+author:
+  name: Peter Müller
+  link: https://crycode.de
 categories:
   - [Linux]
   - [Netzwerk]
