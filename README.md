@@ -26,6 +26,8 @@ Der Quellcode für das Theme, sowie einige allgemeine Seiten sind aktuell nicht 
 
 Spezielle Front-Matter Optionen und Tags sind weiter unten erklärt.
 
+Gehosted wird die Webseite auf den Servern von [cryHost](https://cryhost.de) in Deutschland.
+
 ## Beiträge
 
 Alle Beiträge liegen im Verzeichnis `posts` in Form von Markdown-Dateien.  
