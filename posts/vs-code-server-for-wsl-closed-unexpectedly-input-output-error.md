@@ -28,7 +28,7 @@ Als Fehlermeldung erscheint dann:
 > VS Code Server for WSL closed unexpectedly.
 > Check WSL terminal for more details.
 
-{% img vscode-wsl-closed-unexpectedly.png %}
+![](vscode-wsl-closed-unexpectedly.png)
 
 <!-- more -->
 
