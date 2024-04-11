@@ -5,7 +5,7 @@ updated: 2024-04-01 14:39:00
 author:
   name: Peter Müller
   link: https://crycode.de
-banner: banner.jpg
+banner: banner.webp
 categories:
   - [Windows]
   - [Software]
@@ -28,7 +28,7 @@ Als Fehlermeldung erscheint dann:
 > VS Code Server for WSL closed unexpectedly.
 > Check WSL terminal for more details.
 
-![Fehlermeldung](vscode-wsl-closed-unexpectedly.png)
+{% img fehlermeldung.webp Fehlermeldung von VS Code %}
 
 <!-- more -->
 

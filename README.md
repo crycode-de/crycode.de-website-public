@@ -282,6 +282,19 @@ Zusätzliche optionale Argumente sind mit einem Prefix versehen:
 {% img screenshot.webp group:gruppe1 right:true Screenshot von irgendetwas %}
 ```
 
+#### `{% grid ... %}` / `{% endgrid %}`
+
+Ein Grid Layout mit 2 bis 5 Spalten für Bilder, die den `{% img ... %}` Tag verwenden.
+
+Als Argument wird die gewünschte Anzahl an Spalten angegeben.
+
+```md
+{% grid 2 %}
+{% img bild1.webp Bild 1}
+{% img bild2.webp Bild 2}
+{% endgrid %}
+```
+
 ## Lizenz
 
 [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/), sofern nicht abweichend in den Beiträgen angegeben.
