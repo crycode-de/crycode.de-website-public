@@ -295,6 +295,32 @@ Als Argument wird die gewünschte Anzahl an Spalten angegeben.
 {% endgrid %}
 ```
 
+#### `{% codefile ... %}`
+
+Code aus einer Datei des Asset-Verzeichnisses des Beitrags als Codeblock einbinden.
+
+Das erste Argument ist optional die Sprache, die für den Coder verwendet werden soll.  
+Das zweit Argument ist der Dateiname. Alle weiteren Argumente werden als Titel genutzt.
+
+```md
+{% codefile js script.js Ein tolles Script %}
+{% codefile text.log Log-Text %}
+```
+
+#### `{% svgicon ... %}`
+
+Ein SVG-Icon einfügen.
+
+Als erstes und einziges Argument muss der Name des Icons angegeben werden.
+
+Alternativ kann auch `<svgicon ... />` verwendet werden, wodurch das Icon beispielsweise auch innerhalb von Tags eingefügt werden kann.
+
+```md
+{% svgicon download %}
+<svgicon download />
+<svgicon github>
+```
+
 ## Lizenz
 
 [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/), sofern nicht abweichend in den Beiträgen angegeben.
