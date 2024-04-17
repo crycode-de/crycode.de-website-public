@@ -1,0 +1,40 @@
+{
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  "editor.rulers": [
+    {
+      "column": 80,
+      "color": "#55555520"
+    },
+    {
+      "column": 120,
+      "color": "#ff555520"
+    }
+  ],
+  "editor.tabSize": 2,
+  "cSpell.language": "de,en",
+  "cSpell.allowCompoundWords": true,
+  "cSpell.enabledLanguageIds": [
+    "javascript",
+    "markdown",
+  ],
+  "cSpell.words": [
+    "Antippen",
+    "Arduinos",
+    "giscus",
+    "Hetzner",
+    "homepi",
+    "Lüftergeschwindigkeit",
+    "Lüftersteuerung",
+    "Phoenixstecker",
+    "Prefixlänge",
+    "Pulsweitenmodulation",
+    "responsiv",
+    "responsives",
+    "sysinfo",
+    "Tachosignal",
+    "Traco",
+    "webp"
+  ],
+}

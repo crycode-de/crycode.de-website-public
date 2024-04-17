@@ -30,7 +30,7 @@ Das neue Layout ist in allen Bereichen responsiv gestaltet, sodass die Webseite 
 
 ### Dynamischer Seitenheader
 
-Der neue Header (Kopfteil) ist dynamisch gestaltet und bildet tagesaktuell die [Contriburions-Grafik meines GitHub-Profils](https://github.com/crycode-de) ab.
+Der neue Header (Kopfteil) ist dynamisch gestaltet und bildet tagesaktuell die [Contributions-Grafik meines GitHub-Profils](https://github.com/crycode-de) ab.
 
 ### GitHub Integration
 
@@ -47,7 +47,7 @@ Die Kommentare werden dabei in den [GitHub Discussions](https://github.com/cryco
 
 ### Suchfunktion
 
-Über die integierte [Suche](/suche) kann die gesamte **cryCode.de** Webseite durchsucht werden.
+Über die integrierte [Suche](/suche) kann die gesamte **cryCode.de** Webseite durchsucht werden.
 
 Die Suche findet dabei vollkommen clientseitig im Browser statt, wodurch keine Daten (wie Beispielsweise die Suchbegriffe) getracked werden.
 
@@ -63,12 +63,12 @@ Da es sich nun um eine rein statische Webseite handelt und zudem die Größe deu
 
 Beim Umzug der alten Webseite von Wordpress auf Hexo habe ich alle Beiträge übertragen und gegebenenfalls gleich noch aktualisiert. Alle alten Links sollten weiterhin funktionieren und gegebenenfalls automatisch auf die jeweils neue Seite umgeleitet werden.
 
-Die Kommentare von der alten Seite konnten leider nicht übernommen werden. Wichtige Anmerkunden daraus habe ich den jeweiligen Beitrag mit einfließen lassen.
+Die Kommentare von der alten Seite konnten leider nicht übernommen werden. Wichtige Anmerkungen daraus habe ich den jeweiligen Beitrag mit einfließen lassen.
 
 ## Schlusswort
 
 Die Umstellung der **cryCode.de** Webseite war einiges an Arbeit, aber hat sich letztendlich gelohnt.
 
-Änderungswünsche, Fehlermeldungen oder auch Gastbeiträge können sehr gerne im GitHub Repositoy eingereicht werden.
+Änderungswünsche, Fehlermeldungen oder auch Gastbeiträge können sehr gerne im GitHub Repository eingereicht werden.
 
 Vielen Dank fürs Lesen! 😉
