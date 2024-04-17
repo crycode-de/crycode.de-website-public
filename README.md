@@ -185,6 +185,32 @@ Um den Auszug des Beitrags vom restlichen Beitrag zu trennen, sollte an entsprec
 
 Damit Endet an dieser Stelle der automatisch generierte Auszug des Beitrags und auf den Index-Seiten wird dann der *Mehr lesen* Button angezeigt.
 
+### Inhaltsverzeichnisse
+
+Inhaltsverzeichnisse einer Seite können automatisch über die Verwendeten Überschriften erstellt werden.
+
+Dazu muss der folgende Code an der gewünschten Stelle eingefügt werden:
+
+```html
+<!-- toc -->
+```
+
+Optional können zudem ein Titel und/oder die enthaltenen Überschriftslevel angegeben werden.
+
+```html
+Mit Titel (als h2):
+<!-- toc Inhalt -->
+
+Bis einschließlich h3:
+<!-- toc 3 -->
+
+Alles h3 bis h6:
+<!-- toc 3:6 -->
+
+Mit Titel h2 bis h3:
+<!-- toc Inhalt 2:3 -->
+```
+
 ### Hinweis-/Warnmeldungen
 
 Hinweis- und Warnmeldungen werden wie auf GitHub unterstützt.

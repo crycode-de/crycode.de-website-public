@@ -25,6 +25,8 @@ Ich habe damit beispielsweise bei mir die Schnittstelle meines als [RadioHead Se
 
 <!-- more -->
 
+<!-- toc Inhalt -->
+
 ## Vorbereitungen
 
 Die Einrichtung ist recht einfach. Auf Linux-Systemen muss dafür lediglich auf beiden Systemen das Tool `socat` installiert sein.
