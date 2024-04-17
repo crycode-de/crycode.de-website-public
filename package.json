@@ -1,0 +1,27 @@
+{
+  "name": "crycode.de-website-public",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Public part of the cryCode.de website",
+  "scripts": {
+    "lint": "node lint.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crycode-de/crycode.de-website-public"
+  },
+  "author": {
+    "name": "Peter Müller",
+    "email": "peter@crycode.de",
+    "url": "https://crycode.de"
+  },
+  "license": "CC-BY-NC-ND-4.0",
+  "bugs": {
+    "url": "https://github.com/crycode-de/crycode.de-website-public/issues"
+  },
+  "homepage": "https://crycode.de",
+  "dependencies": {
+    "glob": "^10.3.12",
+    "markdownlint": "^0.34.0"
+  }
+}

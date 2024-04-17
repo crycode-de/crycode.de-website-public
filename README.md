@@ -347,6 +347,21 @@ Alternativ kann auch `<svgicon ... />` verwendet werden, wodurch das Icon beispi
 <svgicon github>
 ```
 
+## Prüfung der Markdown-Dateien
+
+Die Markdown-Dateien können mittels [markdownlint](https://github.com/DavidAnson/markdownlint) automatisch überprüft werden.
+
+Hierzu müssen zuerst die Node.js-Module installiert werden.
+Anschließend kann das `lint`-Script aufgerufen werden.
+
+```sh
+npm install
+npm run lint
+```
+
+Erkannte Probleme in Dateien im `drafts`-Verzeichnis werden als Warnung angezeigt.
+Probleme in Dateien im `posts`-Verzeichnis werden als Fehler angezeigt und das Script mit Exit-Code 1 beendet.
+
 ## Lizenz
 
 [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/), sofern nicht abweichend in den Beiträgen angegeben.

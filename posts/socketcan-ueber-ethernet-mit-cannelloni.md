@@ -219,7 +219,6 @@ Ebenso können natürlich beide Services auch per Hand gestoppt werden. Beim Sto
 
 Auf dem System mit der echten Schnittstelle `can0` benötigen wir nur einen SystemD-Service für *Cannelloni*. Dieser ist nahezu identisch mit dem Service auf dem anderen System.
 
-
 ```sh SystemD-Service im Editor öffnen
 sudo nano /etc/systemd/system/cannelloni-can0.service
 ```

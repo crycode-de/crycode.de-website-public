@@ -26,7 +26,7 @@ Zu den Highlights der neuen **cryCode.de** Webseite gehören:
 
 ### Neues modernes und responsives Layout
 
-Das neue Layout ist in allen Bereichen responiv gestaltet, sodass die Webseite auf allen Endgeräten schön angezeigt wird und sich automatisch anpasst.
+Das neue Layout ist in allen Bereichen responsiv gestaltet, sodass die Webseite auf allen Endgeräten schön angezeigt wird und sich automatisch anpasst.
 
 ### Dynamischer Seitenheader
 
