@@ -170,6 +170,14 @@ Wenn auf `false` gesetzt, werden die Teilen-Links zu diesem Beitrag deaktiviert.
 
 Wenn auf `false` gesetzt, wird der Beitrag nicht in der Sitemap aufgenommen.
 
+### `class`
+
+Name(n) von CSS-Klassen, die dem Artikel hinzugefügt werden sollen.
+
+```yml
+class: center
+```
+
 ## Beitragsinhalt
 
 In den Beiträgen kann [GitHub Flavored Markdown](https://docs.github.com/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) (kurz GFM) verwendet werden.  
@@ -255,7 +263,7 @@ Optional können dabei ein Titel, eine URL und ein Link-Text mit angegeben werde
 
 Eine Liste der verfügbaren Sprachen ist [hier](https://highlightjs.readthedocs.io/en/latest/supported-languages.html) zu finden.
 
-````
+````md
 ```[Sprache] [Titel] [URL] [Link-Text]
 // code
 ```
