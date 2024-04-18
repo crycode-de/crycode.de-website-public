@@ -305,6 +305,7 @@ Als weitere Argumente kann ein Titel für das Bild angegeben werden.
 
 Zusätzliche optionale Argumente sind mit einem Prefix versehen:
 
+* `thumb:...` - Thumbnail Bild, welches direkt im Beitrag eingebunden wird. Bei Angabe von `thumb:` ohne Dateiname wird dem Dateinamen des originalen Bildes vor der Endung `-thumb` hinzugefügt.
 * `group:abc` - Gruppenname/Gruppen-ID zur Gruppierung mehrere Bilder in einem Beitrag. (Standardmäßig der Slug des Beitrags.)
 * `type:video` - Typ der einzubindenden Medien, wenn es kein Bild ist. (`video`, `iframe`, `ajax`)
 * `maxwidth:300px` - Maximale Breite in der Lightbox-Ansicht.

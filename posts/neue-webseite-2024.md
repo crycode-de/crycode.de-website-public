@@ -53,7 +53,7 @@ Die Suche findet dabei vollkommen clientseitig im Browser statt, wodurch keine D
 
 ### Geringe Datengröße der Seite
 
-Die Startseite ist aktuell lediglich circa 250 kB groß, wobei die vom Server zu ladende Datenmenge dank Komprimierung bei lediglich etwa 150 kB liegt. (Im Vergleich dazu lag die alte Startseite bei rund 900 kB.)
+Die Startseite ist aktuell lediglich circa 300 kB groß, wobei die vom Server zu ladende Datenmenge dank Komprimierung bei lediglich etwa 150 kB liegt. (Im Vergleich dazu lag die alte Startseite bei rund 900 kB.)
 
 ### Sehr schnelle Ladezeiten
 
