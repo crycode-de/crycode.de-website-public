@@ -1,5 +1,5 @@
 ---
-title: Projekt HomePi – Einbindung von MQTT in ioBroker
+title: Projekt HomePi - Einbindung von MQTT in ioBroker
 author:
   name: Peter Müller
   link: https://crycode.de

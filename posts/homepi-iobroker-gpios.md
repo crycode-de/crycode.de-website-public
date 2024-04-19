@@ -1,5 +1,5 @@
 ---
-title: Projekt HomePi – ioBroker GPIOs
+title: Projekt HomePi - ioBroker GPIOs
 author:
   name: Peter Müller
   link: https://crycode.de

@@ -26,6 +26,8 @@
     "giscus",
     "Hetzner",
     "homepi",
+    "journalctl",
+    "Logindaten",
     "Lüftergeschwindigkeit",
     "Lüftersteuerung",
     "Phoenixstecker",
@@ -37,6 +39,7 @@
     "Tachosignal",
     "Traco",
     "Umschlüsselung",
+    "Verlaufsdaten",
     "webp"
   ],
 }

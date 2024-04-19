@@ -1,5 +1,5 @@
 ---
-title: Projekt HomePi – Die Spannungsversorgung
+title: Projekt HomePi - Die Spannungsversorgung
 author:
   name: Peter Müller
   link: https://crycode.de
