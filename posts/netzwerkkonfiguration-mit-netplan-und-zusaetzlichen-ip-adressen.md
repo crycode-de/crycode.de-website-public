@@ -3,7 +3,6 @@ title: Netzwerkkonfiguration mit Netplan und zusätzlichen IP-Adressen
 author:
   name: Peter Müller
   link: https://crycode.de
-banner: banner.webp
 date: 2020-10-15 12:00:00
 updated: 2024-04-17 15:35:00
 abbr:
