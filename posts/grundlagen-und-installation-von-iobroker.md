@@ -5,7 +5,7 @@ author:
   link: https://crycode.de
 banner: banner.webp
 date: 2019-09-18 12:00:00
-updated: 2024-04-19 15:17:51
+updated: 2024-04-20 20:25:00
 categories:
   - ioBroker
 tags:
@@ -65,6 +65,24 @@ Jede Instanz eines Adapters hat einen eigenen Namensbereich, in dem die Objekte 
 So ist beispielsweise bei einem Raspberry Pi mit installiertem [RPI-Monitor](https://github.com/iobroker-community-adapters/ioBroker.rpi2) Adapter die aktuelle CPU-Temperatur über die Objekt-ID `rpi2.0.temperature.soc_temp` verfügbar.
 
 {% img iobroker-objekte.webp thumb: ioBroker Admin-UI Objekt-Baumstruktur %}
+
+### Eigene Benutzerdefinierte Objekte
+
+Zusätzlich zu den Objekten, die von den Adaptern automatisch erzeugt werden, können auch selbst Objekte für beliebige Zustände erzeugt werden.
+
+Hierfür ist im Objektbaum der Bereich `0_userdata.0` vorgesehen. In diesem können wir beispielsweise über die Adminoberfläche ganz einfach selbst Objekte erzeugen und diese anschließend im gesamten *ioBroker* verwenden.
+
+> [!WARNING]
+> Im Expertenmodus ist es auch möglich Objekte an jeder beliebigen Stelle im Objektbaum anzulegen und zu bearbeiten.
+> Dies sollte generell aber nur in Ausnahmefällen gemacht werden, da dies beispielsweise die Funktion von Adaptern beeinflussen kann.
+
+## Zustände
+
+Der jeweils aktuelle Wert eines Objektes wird als Zustand, oder auch State, bezeichnet.  
+Für jeden Zustand muss zuvor ein entsprechendes Objekt definiert sein.
+
+Jeder Zustand verfügt über ein *Ack*-Flag, quasi eine Art Markierung, welches `true` oder `false` sein kann.  
+Vereinfacht lässt sich das so beschreiben, dass Zustände mit `ack=false` dazu dienen um Aktionen auszulösen (beispielsweise den Befehl geben eine Lampe einzuschalten). Zustände mit `ack=true` hingegen sind dann die Rückmeldung, dass die Aktion durchgeführt wurde oder auch von Adaptern ermittelte Werte.
 
 ## Speicherung von Daten in ioBroker
 
