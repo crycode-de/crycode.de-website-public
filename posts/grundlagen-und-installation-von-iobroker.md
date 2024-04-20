@@ -99,7 +99,7 @@ Dieser ermöglicht es die Daten in eine InfluxDB, welche besonders für Zeitreih
 
 Eine weitere Alternative ist der Adapter [SQL](https://github.com/ioBroker/ioBroker.sql),welcher eine Speicherung in eine MySQL, PostgreSQL, Microsoft SQL Server oder SQLite Datenbank ermöglicht.
 
-Die Einbindung der InfluxDB und SQL Adapter wird weiter unten beschrieben.
+Die Einbindung der InfluxDB- und SQL-Adapter wird weiter unten beschrieben.
 
 ## Installation in ioBroker
 
@@ -142,7 +142,7 @@ sudo apt update
 sudo apt install redis
 ```
 
-Anschließend können wir testen, ob der Redis Server läuft indem wir `redis-cli` aufrufen und alle gespeicherten Schlüssel abfragen:
+Anschließend können wir testen, ob der Redis Server läuft, indem wir `redis-cli` aufrufen und alle gespeicherten Schlüssel abfragen:
 
 ```sh Test von Redis
 user@host:~ $ redis-cli
@@ -233,7 +233,7 @@ Anschließend starten wir ioBroker wieder:
 user@host:~ $ iobroker start
 ```
 
-Wenn wir nun erneut aus Redis alle bekannten Schlüssel abfragen sollten wir schon einige Ergebnisse erhalten:
+Wenn wir nun erneut aus Redis alle bekannten Schlüssel abfragen, sollten wir schon einige Ergebnisse erhalten:
 
 ```sh Redis Keys abfragen
 user@host:~ $ redis-cli KEYS '*'
@@ -285,7 +285,7 @@ sudo systemctl start influxdb
 Die Weboberfläche von InfluxDB 2 ist anschließend über `http://<ip>:8086/` erreichbar und sollte genutzt werden, um die Einrichtung abzuschließen.
 
 Die Einstellungen für Benutzername, Organisationsname und Bucket Name sind frei wählbar, werden aber später benötigt.  
-Im Anschluss wird ein Token angezeigt, welches wir uns unbedingt notiren sollten.
+Im Anschluss wird ein Token angezeigt, welches wir uns unbedingt notieren sollten.
 
 {% grid 2 %}
 {% img influxdb2-setup-1.webp thumb: Initiales InfluxDB 2 Setup %}
@@ -327,7 +327,7 @@ In dem folgenden Dialog setzen wir in den Benutzerdefinierten Einstellungen für
 {% img iobroker-adapter-influxdb-aktivieren2.webp thumb: SQL-Adapter Objekt-Einstellungen %}
 {% endgrid %}
 
-Wenn alles funktioniert, dann ist schon kurze Zeit später in dem selben Dialog über den Reiter *Verlaufsdaten* eine Tabelle der gespeicherten Daten verfügbar.
+Wenn alles funktioniert, dann ist schon kurze Zeit später in demselben Dialog über den Reiter *Verlaufsdaten* eine Tabelle der gespeicherten Daten verfügbar.
 
 {% img iobroker-adapter-influxdb-verlaufsdaten.webp thumb: Verlaufsdaten über den SQL-Adapter %}
 
@@ -449,7 +449,7 @@ Die MySQL-Session beenden wir anschließend mit `STRG`+`D`.
 
 Das `Passw0rt` solltet ihr natürlich ändern. 😉
 
-Anschließend können wir über die Administrationsoberfläche den SQL Adapter suchen und installieren.
+Anschließend können wir über die Administrationsoberfläche den SQL-Adapter suchen und installieren.
 
 {% grid 2 %}
 {% img iobroker-adapter-sql-suche.webp thumb: Suche nach dem SQL-Adapter %}
@@ -486,7 +486,7 @@ Vor der Installation müssen wir zunächst die Lizenzbedingungen lesen und akzep
 {% endgrid %}
 
 > [!NOTE]
-> Je nach Leisung eures Systems kann die Installation etwas dauern. Also nicht ungeduldig werden. 😉
+> Je nach Leistung eures Systems kann die Installation etwas dauern. Also nicht ungeduldig werden. 😉
 
 Zusätzlich zu VIS wird automatisch auch der [Webserver-Adapter](https://github.com/ioBroker/ioBroker.web) installiert. Dieser wird von VIS und einigen anderen Adaptern benötigt, um ihre Dienste bereitzustellen.
 
@@ -495,4 +495,73 @@ Hier muss ein Lizenzschlüssel eingegeben werden, damit der Adapter genutzt werd
 
 {% img iobroker-vis2-einstellungen.webp thumb: Einstellungen der VIS 2 Adapterinstanz %}
 
-Für die **private** Nutzung ist VIS kostenlos. Über <https://iobroker.net/> kann man sich einen *ioBroker Cloud Account* erzeugen und nach dem Bestätigen der {% abbr AGB %} einen Lizenzschlüssel für *iobroker.vis-2* für den *privaten Gebrauch* kostenlos bestellten. Diesen Lizenzschlüssel fügen wir dann in der Adapterkonfiguration ein und klicken auf *Speichern und Schließen*.
+Für die **private** Nutzung ist VIS kostenlos.  
+Über <https://iobroker.net/> kann man sich einen *ioBroker Cloud Account* erzeugen.  
+Mit diesem ist es dann möglich eine *Community-Lizenz* für *iobroker.vis-2* kostenfrei zu "bestellen".
+
+> [!TIP]
+> Bei mir ist E-Mail zur Bestätigung der Adresse im Spam-Ordner gelandet. Wenn ihr also scheinbar keine E-Mail bekommt, dann schaut dort mal nach.
+
+Bei der Bestellung müssen die {% abbr AGB %} akzeptiert und ein paar persönliche Daten angegeben werden.  
+Die Seriennummer der *ioBroker*-Installation ist in den Adaptereinstellungen zu finden und muss von dort kopiert werden.
+
+{% grid 2 %}
+{% img vis2-lizenz-1.webp thumb: Auswahl der Lizenz %}
+{% img vis2-lizenz-2.webp thumb: Daten eingeben %}
+{% img vis2-lizenz-3.webp thumb: AGB lesen und akzeptieren %}
+{% img vis2-lizenz-4.webp thumb: Lizenz erstellt %}
+{% endgrid %}
+
+Trotz der Auswahl von VIS 2 wurde bei mir die Lizenz für VIS &lt;2 erstellt. Über den Button *Zu v2 konvertieren* kann die Lizenz aber einfach für VIS 2 konvertiert werden. Dabei muss nochmals die Seriennummer der *ioBroker*-Installation angegeben werden.
+
+Über den Auge-Button können wir anschließend die Lizenz anzeigen lassen.
+
+{% grid 2 %}
+{% img vis2-lizenz-5.webp thumb: Lizenz wurde für VIS &lt;2 erstellt %}
+{% img vis2-lizenz-6.webp thumb: Seriennummer erneut eingeben %}
+{% img vis2-lizenz-7.webp thumb: Lizenzübersicht %}
+{% img vis2-lizenz-8.webp thumb: Lizenz ansehen %}
+{% endgrid %}
+
+Den *Lizenzschlüssel* kopieren wir in die Adaptereinstellungen und klicken auf *Speichern und Schließen*.
+
+{% img iobroker-vis2-einstellungen-2.webp thumb: Lizenzschlüssel in den Adaptereinstellungen einfügen %}
+
+Anschließend können wir die VIS-Oberfläche über `http://<ip>:8082/` erreichen und von dort aus zur Anzeige, der sogenannten *Runtime* oder zum *Editor* wechseln.
+
+Hier wählen wir zunächst den *Editor*, um unsere Oberfläche zu erstellen und zu bearbeiten. Dort wählen wir dann *Neues Projekt erstellen* und geben dem Projekt einen beliebigen Namen.
+
+{% grid 2 %}
+{% img vis2-uebersicht.webp thumb: Übersicht %}
+{% img vis2-neues-projekt.webp thumb: Neues Projekt erstellen %}
+{% endgrid %}
+
+In dieser Editor-Ansicht können wir uns dann aus der linken Seite alle möglichen Elemente, die sogenannten Widgets, in unsere Ansicht in der Mitte ziehen.
+
+In der rechten Seitenleiste kann das jeweils aktuell ausgewählte Widget sehr detailliert konfiguriert werden.
+
+{% img vis2-editor.webp thumb: VIS Editor %}
+
+> [!NOTE]
+> Der Editor kann im ersten Moment etwas überwältigend wirken, da er sehr viele Funktionen bietet.
+> Es lohnt sich aber definitiv sich etwas einzuarbeiten.
+> Mit etwas Übung lassen sich relativ einfach sehr gute Oberflächen mit vielen Möglichkeiten erstellen.
+
+VIS ist extrem flexibel und bietet nahezu unbegrenzte Möglichkeiten die Benutzeroberfläche nach den eigenen Vorstellungen anzupassen.  
+Mit VIS 2 lassen sich inzwischen sogar responsive Layouts erstellen, welche sich der Größe des jeweils verwendeten Endgerätes angleichen.
+
+## Abschließende Hinweise
+
+Diese Anleitung beinhaltet nur einen kleinen Teil dessen, was mit *ioBroker* alles möglich ist.
+
+Viele weitere, teils sehr ausführliche Informationen sind in der offiziellen [Dokumentation](https://www.iobroker.net/#de/documentation) zu finden.
+
+Eine Übersicht über aktuell verfügbare Adapter kann in der [Adapterliste](https://www.iobroker.net/#de/adapters) eingesehen werden.
+
+Zudem lohnt sich fast immer ein Blick in das [ioBroker Forum](https://forum.iobroker.net/). Hier können auch alle möglichen Fragen und Probleme mit der Community und den Entwicklern geklärt werden.
+
+---
+
+Wenn euch meine Anleitung gefallen hat, lasst gerne einen Daumen hoch oder einen Kommentar da.
+
+**Viel Erfolg mit eurem *ioBroker*! 😎**
