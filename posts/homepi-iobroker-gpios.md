@@ -22,6 +22,8 @@ Betreibt man ioBroker auf einem Raspberry Pi, dann möchte man sicherlich auch d
 
 Dieser Beitrag beschreibt die Installation und Einrichtung des RPI-Monitor Adapters, welcher den Zugriff auf einzelne (oder alle) {% abbr GPIO %}s des Raspberry Pi ermöglicht.
 
+<!-- more -->
+
 ## Installation des RPI-Monitor Adapters
 
 Die Installation des Adapters [RPI-Monitor (rpi2)](https://github.com/iobroker-community-adapters/ioBroker.rpi2) erfolgt wie gewohnt über die Administrationsoberfläche von ioBroker.
