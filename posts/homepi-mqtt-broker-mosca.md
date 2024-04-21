@@ -118,7 +118,7 @@ Diese Konfiguration verwendet [Redis](https://redis.io/) als Cache. Sofern ihr k
 
 Damit die Config-Datei auch verwendet wird, muss sie beim Start mit angegeben werden:
 
-```sh Start von *Mosca* mit Authentifizierung und Konfiguration
+```sh Start von Mosca mit Authentifizierung und Konfiguration
 mosca -v --credentials ~/mosca/credentials.json --config ~/mosca/config.js | bunyan
 ```
 
