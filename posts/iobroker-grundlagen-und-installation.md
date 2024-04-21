@@ -7,7 +7,8 @@ banner: banner.webp
 date: 2019-09-18 12:00:00
 updated: 2024-04-20 20:25:00
 categories:
-  - ioBroker
+  - [ioBroker]
+  - [HomePi]
 tags:
   - ioBroker
   - InfluxDB
