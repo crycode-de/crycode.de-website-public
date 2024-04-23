@@ -1,0 +1,9 @@
+/var/log/nextcloudcmd-sync.log {
+  weekly
+  missingok
+  rotate 4
+  compress
+  delaycompress
+  notifempty
+  create 640 pi pi
+}
