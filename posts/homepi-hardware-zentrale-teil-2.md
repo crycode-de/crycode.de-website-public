@@ -69,9 +69,9 @@ Aufgrund der Größe und der begrenzten Lebensdauer einer SD-Karte verwende ich 
 
 Auf dieser Festplatte befinden sich das Root-Dateisystem `/`, eine extra Home-Partition `/home`, eine Daten-Partition `/var/data`, sowie eine 8&nbsp;Gb große Swap-Partition.
 
-Zumindest gefühlt startet der Raspberry Pi 4 zusammen mit der USB 3.0 Festplatte sogar schneller, als von der standardmäßigen SD-Karte. 🙂
+Zumindest gefühlt startet der Raspberry Pi 4 zusammen mit der USB 3.0 Festplatte sogar schneller als von der standardmäßigen SD-Karte. 🙂
 
-Wie die Einrichtung der USB-Festplatte funktioniert habe ich grundlegend im Beitrag [USB-Festplatte am Raspberry Pi](/usb-festplatte-am-raspberry-pi/) beschrieben.
+Wie die Einrichtung der USB-Festplatte funktioniert, habe ich grundlegend im Beitrag [USB-Festplatte am Raspberry Pi](/usb-festplatte-am-raspberry-pi/) beschrieben.
 
 {% img usb-festplatte.webp thumb: USB-Festplatte %}
 

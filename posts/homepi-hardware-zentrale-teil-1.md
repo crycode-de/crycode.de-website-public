@@ -128,9 +128,9 @@ Herausgeführt wird der CAN-Bus über RJ45 Buchsen, wodurch die externe Verkabel
 > [!CAUTION]
 > Es darf, trotz gleicher Stecker, keine Verbindung zwischen dem CAN-Bus und einem Ethernet hergestellt werden, da dies zu Beschädigungen auf beiden Seiten führen kann!
 
-Es sind ein bis drei Anschlüsse von Kabeln zur externen Verteilung des CAN-Bus sowie +24&nbsp;V Versorgungsspannung vorgesehen. Da ein CAN-Bus als Linientopologie aufgebaut wird, sind die drei Anschlüsse in Reihe geschaltet. Über ein angeschlossenes Kabel wird der CAN-Bus hin und auch wieder zurück geführt. Bei dem letzten verwendeten Anschluss muss die Drahtbrücke (Jumper) zur Aktivierung des Abschlusswiderstands gesetzt werden.
+Es sind ein bis drei Anschlüsse von Kabeln zur externen Verteilung des CAN-Bus sowie +24&nbsp;V Versorgungsspannung vorgesehen. Da ein CAN-Bus als Linientopologie aufgebaut wird, sind die drei Anschlüsse in Reihe geschaltet. Über ein angeschlossenes Kabel wird der CAN-Bus hin- und auch wieder zurückgeführt. Bei dem letzten verwendeten Anschluss muss die Drahtbrücke (Jumper) zur Aktivierung des Abschlusswiderstands gesetzt werden.
 
-Zusätzlich zu der direkten Anbindung an den Raspberry Pi Verfügt diese Platine über einen eigenständigen Mikrocontroller vom Typ *ATMega328*, der ebenfalls über einen *MCP2515* und *MCP2562* an den CAN-Bus angebunden ist. Über diesen kann bei einer entsprechenden Nachricht über den CAN-Bus ein Hardware-Reset des zentralen Raspberry Pi ausgelöst werden. Zusätzlich steuert er drei Status-LEDs an und verfügt über neun freie GPIOs, die bei Bedarf auf die Leitungen *A14* bis *A22* der Backplane gelegt werden können.
+Zusätzlich zu der direkten Anbindung an den Raspberry Pi verfügt diese Platine über einen eigenständigen Mikrocontroller vom Typ *ATMega328*, der ebenfalls über einen *MCP2515* und *MCP2562* an den CAN-Bus angebunden ist. Über diesen kann bei einer entsprechenden Nachricht über den CAN-Bus ein Hardware-Reset des zentralen Raspberry Pi ausgelöst werden. Zusätzlich steuert er drei Status-LEDs an und verfügt über neun freie GPIOs, die bei Bedarf auf die Leitungen *A14* bis *A22* der Backplane gelegt werden können.
 
 Die drei Status-LEDs können, je nach Programmierung des *ATMega328* Mikrocontrollers, beispielsweise dazu genutzt werden den Empfang von bestimmten CAN-Nachrichten unabhängig vom zentralen Raspberry Pi zu signalisieren.
 
@@ -155,7 +155,7 @@ Programmiert werden kann der *ATMega328* Mikrocontroller entweder über die hera
 Zur Ansteuerung von drei Rollläden habe ich bereits im Jahr 2015 diese Platine entworfen und gebaut.
 
 > [!NOTE]
-> Die Platine funktioniert seit dem sehr gut, trotzdem an dieser Stelle der Hinweis, dass ich dies inzwischen etwas anders bauen würde.
+> Die Platine funktioniert seitdem sehr gut, trotzdem an dieser Stelle der Hinweis, dass ich dies inzwischen etwas anders bauen würde.
 
 Auf der Platine befinden sich zwei [PCF8574](https://www.ti.com/lit/ds/symlink/pcf8574.pdf) {% abbr IC %}s, wobei jeweils einer für 6 Aus- beziehungsweise 6 Eingänge zuständig ist. Die Ansteuerung der beiden {% abbr IC %}s erfolgt durch den zentralen Raspberry Pi über den {% abbr I²C %}-Bus. Alle Ein- und Ausgänge sind über Optokoppler von der externen Verkabelung galvanisch getrennt.
 
@@ -191,7 +191,7 @@ Die Steuerung der Ein- und Ausgänge erfolgt über vier [PCF8574](http://www.ti.
 Die Anbindung von externen Komponenten erfolgt über RJ45-Buchsen. Diese sind recht günstig in der Anschaffung und einfach in der Handhabung. Einziger Nachteil ist, dass es eventuell zu Verwechslungen mit Ethernet-Buchsen kommen könnte.
 Weiterhin sind zwei Wannenstecker vorgesehen, über die eine zusätzliche Verbindung zu anderen Platinen hergestellt werden kann. Dies kann beispielsweise erforderlich werden, wenn die Pins der RJ45-Buchsen nicht mehr ausreichen.
 
-Um die Platine so flexibel wie möglich zu gestalten wurde auf eine feste Verbindung der {% abbr IO %}s mit den RJ45-Buchsen beziehungsweise den Wannensteckern verzichtet. Dafür sind an den jeweiligen Stellen auf der Platine Lötpunkte vorgesehen, sodass einfache Kabelbrücken vom Ein- beziehungsweise Ausgang zum entsprechenden Anschluss geschaffen werden können.
+Um die Platine so flexibel wie möglich zu gestalten, wurde auf eine feste Verbindung der {% abbr IO %}s mit den RJ45-Buchsen beziehungsweise den Wannensteckern verzichtet. Dafür sind an den jeweiligen Stellen auf der Platine Lötpunkte vorgesehen, sodass einfache Kabelbrücken vom Ein- beziehungsweise Ausgang zum entsprechenden Anschluss geschaffen werden können.
 
 Zur Einbindung des alten Stecksystems an die neue 2019er Backplane ist eine Adapterplatine (siehe unten) erforderlich.
 
@@ -214,7 +214,7 @@ Zur Einbindung des alten Stecksystems an die neue 2019er Backplane ist eine Adap
 
 ## Adapterplatine
 
-Damit die älteren Platinen aus 2015 und 2016 mit der neuen Backplane aus 2019 weiter verwendet werden können, habe ich eine kleine Adapterplatine erstellt. Auf diese Adapterplatine kann eine alte Platine aufgelötet werden und die Kombination dann zusammen in das neue System gesteckt werden.
+Damit die älteren Platinen aus 2015 und 2016 mit der neuen Backplane aus 2019 weiterverwendet werden können, habe ich eine kleine Adapterplatine erstellt. Auf diese Adapterplatine kann eine alte Platine aufgelötet werden und die Kombination dann zusammen in das neue System gesteckt werden.
 
 {% grid 3 %}
 {% img adapterplatine-2019-1.webp thumb: Adapterplatine vorne %}
