@@ -75,7 +75,7 @@ Download des Paketes `inkscape` für Ubuntu `mantic` (23.10) unter Verwendung de
 Download des Paketes `ntp` für Raspberry Pi OS `bookworm` unter Verwendung der normalen Raspberry Pi OS Repository Einstellungen inklusive aller Abhängigkeiten.
 
 ```sh Download von ntp für Raspberry Pi OS bookworm mit allen Abhängigkeiten
-./deb-downloader.sh -m http://archive.raspbian.org/raspbian/ -d bookworm \
+./deb-downloader.sh -m http://raspbian.raspberrypi.com/raspbian/ -d bookworm \
   -c "main contrib non-free rpi" -a armhf -p ntp -D
 ```
 

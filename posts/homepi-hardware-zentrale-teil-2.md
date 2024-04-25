@@ -19,7 +19,7 @@ abbr:
   TE: Teileinheiten
 ---
 
-Dieser Beitrag soll der Hardware in der Zentrale des *HomePi* beschreiben.
+Dieser Beitrag soll der Hardware in der Zentrale des [HomePi](/kategorie/homepi) beschreiben.
 
 In *Teil 2* sind dies Gehäuse, Netzteil und sonstige Komponenten.  
 Hier geht es zu [Teil 1](/homepi-hardware-zentrale-teil-1/).

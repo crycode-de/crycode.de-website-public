@@ -19,7 +19,7 @@ abbr:
   THT: engl. 'through-hole technology' - bedrahtete Bauteile
   SMD: engl. 'Surface-mounted device' - oberflächenmontiertes Bauelement
   I²C: Inter Integrated Circuit
-  IC: Integrated Circuits / Integrierte Schaltkreise
+  IC: Integrated Circuit / Integrierter Schaltkreis
   SPI: Serial Peripheral Interface
   UART: Universal Asynchronous Receiver / Transmitter
   GPIO: General Purpose Input Output
@@ -29,7 +29,7 @@ abbr:
   IO: Input/Output
 ---
 
-Dieser Beitrag soll der Hardware in der Zentrale des *HomePi* beschreiben.
+Dieser Beitrag soll der Hardware in der Zentrale des [HomePi](/kategorie/homepi) beschreiben.
 
 In *Teil 1* sind dies die Platinen, die alle Einzelkomponenten miteinander verbinden.  
 Hier geht es zu [Teil 2](/homepi-hardware-zentrale-teil-2/).
@@ -122,6 +122,8 @@ Details zur im Jahr 2020 aktualisierten Spannungsversorgung sind im Beitrag [Pro
 ## CAN-Bus
 
 Diese Einschubplatine ermöglicht die Anbindung eines {% abbr CAN %}-Bus an den HomePi. Die Anbindung an den zentralen Raspberry Pi erfolgt über die {% abbr SPI %}-Schnittstelle über einen *MCP2515* CAN-Controller sowie einen *MCP2562* {% abbr CAN %}-Transceiver.
+
+Details zum CAN-Bus am Raspberry Pi habe ich in [einem anderen Beitrag](/can-bus-am-raspberry-pi/) beschrieben.
 
 Herausgeführt wird der CAN-Bus über RJ45 Buchsen, wodurch die externe Verkabelung die Verwendung von handelsüblichen Netzwerkkabeln ermöglicht.
 
