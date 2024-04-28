@@ -103,7 +103,7 @@ Heruntergeladen werden kann die Software für den Mikrocontroller (Arduino Pro M
 
 Mögliche Anpassungen an die eigene Hardware etc. können in der Datei [src/config.h](https://github.com/crycode-de/auto-watering-system/blob/main/src/config.h) vorgenommen werden.
 
-Einige Variablen können zur Laufzeit über Funk gelesen und angepasst werden. Siehe hierzu den Abschnitt [Konfiguration](#konfiguration) weiter unten. Änderungen an diesen einstellbaren Variablen können im EEPROM des Mikrocontrollers sicher gespeichert werden und werden dann bei einem Neustart wieder geladen.
+Einige Variablen können zur Laufzeit über Funk gelesen und angepasst werden. Siehe hierzu den Abschnitt [Konfiguration](#konfiguration-mit-der-control-app) weiter unten. Änderungen an diesen einstellbaren Variablen können im EEPROM des Mikrocontrollers sicher gespeichert werden und werden dann bei einem Neustart wieder geladen.
 
 ### Mit PlatformIO (empfohlen)
 

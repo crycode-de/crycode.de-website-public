@@ -5,7 +5,6 @@ author:
   link: https://crycode.de
 banner: banner.webp
 date: 2019-09-12 12:00:00
-updated: 2024-04-25 17:39:04
 categories:
   - [Elektronik]
   - [HomePi]
