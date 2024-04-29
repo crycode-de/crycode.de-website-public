@@ -146,6 +146,14 @@ abbr:
 abbr_auto: true
 ```
 
+### `sticky`
+
+Einen Beitrag oben anpinnen. Je höher die Zahl ist, desto weiter oben wird der Beitrage bei mehreren angepinnten Posts angezeigt.
+
+```yml
+sticky: 10
+```
+
 ### `comments`
 
 Wenn auf `false` gesetzt, wird die Kommentarfunktion zu diesem Beitrag deaktiviert.

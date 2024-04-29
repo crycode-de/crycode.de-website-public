@@ -1,6 +1,7 @@
 ---
 title: Neue Webseite 2024
 date: 2024-04-11 09:55:34
+sticky: 100
 author:
   name: Peter Müller
   link: https://crycode.de
