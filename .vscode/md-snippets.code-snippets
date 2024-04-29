@@ -26,7 +26,7 @@
 	"IMG Tag": {
 		"scope": "markdown",
 		"prefix": "img",
-		"body": "{% img $TM_SELECTED_TEXT thumb: $1 %}",
+		"body": "{% img $TM_SELECTED_TEXT$1 thumb: $2 %}",
 		"description": "Add img Nunjunks Tag"
 	},
 
@@ -39,5 +39,14 @@
 			"{% endgrid %}"
 		],
 		"description": "Add grid Nunjunks Tags"
+	},
+
+	"Codefile Tag": {
+		"scope": "markdown",
+		"prefix": "codefile",
+		"body": [
+			"{% codefile $1 $2 $3 %}"
+		],
+		"description": "Add codefile Nunjunks Tags"
 	}
 }

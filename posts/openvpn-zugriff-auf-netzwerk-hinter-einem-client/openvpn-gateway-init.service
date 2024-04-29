@@ -1,0 +1,11 @@
+[Unit]
+Description=Setup OpenVPN Gateway
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/openvpn-gateway-init.sh
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
