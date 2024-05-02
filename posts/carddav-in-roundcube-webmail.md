@@ -3,7 +3,6 @@ title: CardDAV in Roundcube Webmail
 author:
   name: Peter Müller
   link: https://crycode.de
-banner: banner.webp
 date: 2016-05-05 12:00:00
 updated: 2024-05-02 18:01:00
 categories:
