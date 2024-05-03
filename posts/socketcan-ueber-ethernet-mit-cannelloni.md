@@ -161,7 +161,7 @@ Dazu legen wir den zugehörigen SystemD-Service an.
 sudo nano /etc/systemd/system/vcan0-setup.service
 ```
 
-```ini SystemD-Service "/etc/systemd/system/vcan0-setup.service"
+```ini SystemD-Service &#47;etc/systemd/system/vcan0-setup.service
 [Unit]
 Description=Setup vcan0
 After=network.target
@@ -182,7 +182,7 @@ Dann fehlt noch der zweite Service für *Cannelloni* selbst.
 sudo nano /etc/systemd/system/cannelloni-vcan0.service
 ```
 
-```ini SystemD-Service "/etc/systemd/system/cannelloni-vcan0.service"
+```ini SystemD-Service &#47;etc/systemd/system/cannelloni-vcan0.service
 [Unit]
 Description=Cannelloni for vcan0
 After=network.target
@@ -223,7 +223,7 @@ Auf dem System mit der echten Schnittstelle `can0` benötigen wir nur einen Syst
 sudo nano /etc/systemd/system/cannelloni-can0.service
 ```
 
-```ini SystemD-Service /etc/systemd/system/cannelloni-can0.service
+```ini SystemD-Service &#47;etc/systemd/system/cannelloni-can0.service
 [Unit]
 Description=Cannelloni for can0
 After=network.target

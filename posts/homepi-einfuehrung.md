@@ -89,7 +89,7 @@ Aufgrund des sehr modularen Systems von ioBroker kann durch entsprechende Adapte
 
 Zusätzlich zu der Hauptaufgabe der Heimautomatisierung übernimmt mein HomePi noch die folgenden Funktionen:
 
-* Dateiserver, der mittels [Samba](/samba-server-auf-dem-raspberry-pi/) Freigaben für Netzlaufwerke erstellt.
+* Dateiserver, der mittels [Samba](/dateifreigaben-mit-samba/) Freigaben für Netzlaufwerke erstellt.
 * [DLNA-Mediaserver](/media-server-auf-dem-raspberry-pi/) zum Streamen von Musik und Videos.
 * OpenVPN-Gateway zur Verbindung des lokalen Netzwerkes mit einem VPN-Netz.
 
