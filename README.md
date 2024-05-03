@@ -2,10 +2,6 @@
 
 [![Logo](cryCode.svg)](https://crycode.de)
 
-> [!IMPORTANT]
-> Diese Informationen beziehen sich auf die aktuell in Arbeit befindliche neue cryCode.de Webseite.  
-> Wann der offizielle Release der neuen Webseite sein wird, steht aktuell noch nicht fest.
-
 Dieses Repository beinhaltet alle öffentlichen Teile der [cryCode.de Webseite](https://crycode.de).
 
 Zudem sind in den [Diskussionen die Kommentare zu den einzelnen Beiträgen](https://github.com/crycode-de/crycode.de-website-public/discussions/categories/kommentare) auf der Webseite zu finden.
