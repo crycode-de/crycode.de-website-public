@@ -1,0 +1,9 @@
+#!/bin/sh
+case $1 in
+  hibernate)
+    # nothing
+    ;;
+  resume|thaw)
+    systemctl restart NetworkManager
+    ;;
+esac
