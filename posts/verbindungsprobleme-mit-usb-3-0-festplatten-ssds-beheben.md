@@ -3,6 +3,7 @@ title: Verbindungsprobleme mit USB 3.0 Festplatten/SSDs beheben
 author:
   name: Peter Müller
   link: https://crycode.de
+banner: banner.webp
 categories:
   - Linux
 tags:
@@ -18,7 +19,9 @@ abbr:
   SSD: Solid State Drive
   SATA: Serial ATA (Schnittstelle für Speichergeräte)
   SCSI: Small Computer System Interface
+date: 2024-05-05 11:01:17
 ---
+
 
 Viele {% abbr USB %} 3.0 Festplatten oder {% abbr SSD %}s werden inzwischen als *USB Attached Storage* (UAS) im System eingebunden. Dies führt jedoch bei manchen Geräten zu Problemen, wobei beispielsweise die Verbindung zum USB-Gerät mittendrin verloren geht und auch nicht automatisch wiederhergestellt wird. Manche Geräte werden im UAS-Modus auch erst gar nicht richtig erkannt.
 
