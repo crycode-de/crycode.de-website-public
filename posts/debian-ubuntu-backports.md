@@ -4,7 +4,7 @@ author:
   name: Peter Müller
   link: https://crycode.de
 date: 2016-12-28 12:00:00
-updated: 2024-04-29 20:57:00
+updated: 2024-05-13 08:30:00
 categories:
   - [Software]
   - [Linux]
@@ -63,7 +63,7 @@ apt -t bookworm-backports install borgbackup
 ### Beispiel für Ubuntu 22.04 (jammy) und das Paket libreoffice
 
 ```sh Beispielinstallation aus den Backports
-apt-get install libreoffice/jammy-backports
+apt install libreoffice/jammy-backports
 ```
 
 ## Weblinks
