@@ -5,20 +5,22 @@ author:
   link: https://crycode.de
 banner: banner.webp
 categories:
-  - [Raspberry Pi]
-  - [Software]
+  - - Raspberry Pi
+  - - Software
 tags:
   - Raspberry Pi
   - QEMU
   - Emulation
   - WSL
+date: 2024-06-08 07:50:27
 ---
+
 
 Mancher kennt das vielleicht: Man möchte Software für einen Raspberry Pi testen, hat aber gerade keinen Raspi zur Hand, oder möchte nicht sein laufendes System gefährden.
 
 Eine (relativ) einfache Lösung kann hier sein auf einem normalen Rechner eine Raspberry Pi zu emulieren.
 
-Hierfür nutzen wir ein aktuelles Ubuntu-System (22.04) und die freie Virtualisierungssoftware [QEMU](https://www.qemu.org/).
+Hierfür nutzen wir ein Ubuntu-System (22.04) und die freie Virtualisierungssoftware [QEMU](https://www.qemu.org/).
 
 <!-- more -->
 
