@@ -5,7 +5,7 @@ author:
   link: https://crycode.de
 #banner: banner.webp
 date: 2017-03-19 12:00:00
-updated: 2024-04-29 16:34:42
+updated: 2024-07-02 20:26:00
 categories:
   - [Linux]
   - [Netzwerk]
@@ -36,7 +36,7 @@ sudo apt install openvpn
 
 cd /etc/openvpn
 
-sudo wget https://github.com/OpenVPN/easy-rsa/releases/download/3.1.7/EasyRSA-3.1.7.tgz
+sudo wget https://github.com/OpenVPN/easy-rsa/releases/download/v3.1.7/EasyRSA-3.1.7.tgz
 sudo tar -xf EasyRSA-3.1.7.tgz
 sudo mv EasyRSA-3.1.7 easyrsa3
 ```
