@@ -5,7 +5,7 @@ author:
   link: https://crycode.de
 #banner: banner.webp
 date: 2017-03-19 12:00:00
-updated: 2024-07-02 20:26:00
+updated: 2024-07-03 17:55:00
 categories:
   - [Linux]
   - [Netzwerk]
@@ -108,7 +108,7 @@ sudo ./easyrsa build-server-full server nopass
 
 Dabei muss zum Signieren des Server-Zertifikates das Passwort des CA-Zertifikates eingegeben werden.
 
-Zudem ist es ratsam TLS-Auth zu verwenden, was jedem Paket bei der Schlüsselaushandlung zwischen Server und Client eine spezielle Signatur hinzufügt. Hierfür erstellen wir einen TA-Schlüssel.
+Zudem ist es ratsam TLS-Crypt zu verwenden, was jedem Paket bei der Schlüsselaushandlung zwischen Server und Client eine spezielle Signatur hinzufügt. Hierfür erstellen wir einen TA-Schlüssel.
 
 ```sh TA-Schlüssel erzeugen
 sudo openvpn --genkey --secret ./pki/ta.key
