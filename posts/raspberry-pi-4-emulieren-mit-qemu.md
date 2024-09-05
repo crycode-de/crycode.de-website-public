@@ -13,6 +13,7 @@ tags:
   - Emulation
   - WSL
 date: 2024-06-08 07:50:27
+updated: 2024-09-05 12:59:00
 ---
 
 
@@ -20,7 +21,7 @@ Mancher kennt das vielleicht: Man möchte Software für einen Raspberry Pi teste
 
 Eine (relativ) einfache Lösung kann hier sein auf einem normalen Rechner eine Raspberry Pi zu emulieren.
 
-Hierfür nutzen wir ein Ubuntu-System (22.04) und die freie Virtualisierungssoftware [QEMU](https://www.qemu.org/).
+Hierfür nutzen wir ein aktuelles Ubuntu-System (24.04) und die freie Virtualisierungssoftware [QEMU](https://www.qemu.org/).
 
 <!-- more -->
 
@@ -39,23 +40,24 @@ Möglich ist die Verwendung der 64-bit und der 32-bit Version. Wir verwenden hie
 Dabei sollten wir auf die dort angegebene *Kernel-Version* achten, da wir gleich den Kernel selbst kompilieren müssen.
 
 > [!NOTE]
-> Bei Erstellung dieser Anleitung war `2024-03-15-raspios-bookworm` mit Kernel 6.6 aktuell.  
+> Bei Erstellung dieser Anleitung war `2024-07-04-raspios-bookworm` mit Kernel 6.6 aktuell.  
 > Wir nutzen hier zur Demonstration die 64-bit Lite-Variante.
 
 Zunächst installieren wir uns noch die benötigten Softwarepakete:
 
 ```sh Benötigte Softwarepakete installieren
-sudo apt install gcc-aarch64-linux-gnu g++-aarch64-linux-gnu qemu \
+sudo apt install gcc-aarch64-linux-gnu g++-aarch64-linux-gnu \
   qemubuilder qemu-system-gui qemu-system-arm qemu-utils qemu-system-data qemu-system \
-  bison flex guestfs-tools libssl-dev telnet
+  bison flex guestfs-tools libssl-dev telnet xz-utils
 ```
 
-Das Image `2024-03-15-raspios-bookworm-arm64-lite.img` und alle weiteren Dateien legen wir Ordner `~/rpi-emu/` ab.
+Das Image `2024-07-04-raspios-bookworm-arm64-lite.img` und alle weiteren Dateien legen wir Ordner `~/rpi-emu/` ab.
 
-```sh Verzeichnis erstellen und Image hinein kopieren
+```sh Verzeichnis erstellen und Image hinein kopieren und entpacken
 mkdir ~/rpi-emu
 cd ~/rpi-emu
-cp ~/Downloads/2024-03-15-raspios-bookworm-arm64-lite.img ./
+cp ~/Downloads/2024-07-04-raspios-bookworm-arm64-lite.img.xz ./
+unxz 2024-07-04-raspios-bookworm-arm64-lite.img.xz
 ```
 
 ## Kernel kompilieren
@@ -64,7 +66,7 @@ Wir benötigen einen für QEMU passenden Kernel, welchen wir uns aus den offizie
 
 Zuerst brauchen wir die aktuelle Kernel-Version, welche wir uns von [kernel.org](https://www.kernel.org/) besorgen können.
 
-Im Idealfall nutzen wir die Version, die auf der Download-Seite von Raspberry Pi OS angegeben ist. Beim Erstellen diese Beitrags war dies die Version *6.6* bzw. *6.6.28*.
+Im Idealfall nutzen wir die Version, die auf der Download-Seite von Raspberry Pi OS angegeben ist. Beim Erstellen diese Beitrags war dies die Version *6.6* bzw. *6.6.49*.
 
 Um den Prozess zu vereinfachen erstellen wir das Skript `build-qemu-kernel.sh` mit folgendem Inhalt und führen es anschließend aus:
 
@@ -93,9 +95,9 @@ Da dies hier nicht automatisch passiert, müssen wir das Image manuell vergröß
 Im folgenden speichern wir das neue Image als `disk.img` und vergrößern es um 20Gb
 
 ```sh Image kopieren und vergrößern
-cp 2024-03-15-raspios-bookworm-arm64-lite.img disk.img
+cp 2024-07-04-raspios-bookworm-arm64-lite.img disk.img
 truncate -s +20G disk.img
-sudo virt-resize --expand /dev/sda2 2024-03-15-raspios-bookworm-arm64-lite.img disk.img
+sudo virt-resize --expand /dev/sda2 2024-07-04-raspios-bookworm-arm64-lite.img disk.img
 ```
 
 > [!TIP]
@@ -192,7 +194,7 @@ ssh -p 2222 pi@localhost
 Nach dem Login werden wir wie gewohnt begrüßt und können wie gewohnt Befehle ausführen.
 
 ```sh Nach dem SSH-Login
-Linux raspberrypi 6.6.28 #1 SMP PREEMPT Mon Apr 22 14:44:05 CEST 2024 aarch64
+Linux raspberrypi 6.6.49 #1 SMP PREEMPT Thu Sep  5 12:19:57 CEST 2024 aarch64
 
 The programs included with the Debian GNU/Linux system are free software;
 the exact distribution terms for each program are described in the
@@ -201,7 +203,7 @@ individual files in /usr/share/doc/*/copyright.
 Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
 permitted by applicable law.
 pi@raspberrypi:~ $ uname -a
-Linux raspberrypi 6.6.28 #1 SMP PREEMPT Mon Apr 22 14:44:05 CEST 2024 aarch64 GNU/Linux
+Linux raspberrypi 6.6.49 #1 SMP PREEMPT Thu Sep  5 12:19:57 CEST 2024 aarch64 GNU/Linux
 pi@raspberrypi:~ $ 
 ```
 

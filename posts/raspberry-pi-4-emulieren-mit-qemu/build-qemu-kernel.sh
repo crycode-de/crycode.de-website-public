@@ -1,5 +1,5 @@
 #!/bin/bash
-VERSION=6.6.28
+VERSION=6.6.49
 
 wget https://cdn.kernel.org/pub/linux/kernel/v${VERSION//.*/.x}/linux-${VERSION}.tar.xz
 tar -xvJf linux-${VERSION}.tar.xz
