@@ -11,3 +11,4 @@ ARCH=arm64 CROSS_COMPILE=/bin/aarch64-linux-gnu- make kvm_guest.config
 ARCH=arm64 CROSS_COMPILE=/bin/aarch64-linux-gnu- make -j8
 
 cp arch/arm64/boot/Image ../kernel
+cd ..
