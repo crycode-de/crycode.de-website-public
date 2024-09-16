@@ -29,6 +29,8 @@ Theoretisch könnte man nämlich beliebigen Text in das Autor-Feld eines Commits
 Für diese Prüfung des Authors ist es nötig die Commits und Tags mit einem GPG (GNU Privacy Guard) Schlüssel zu signieren.
 Da das Signieren erfolgt dabei mit einem privaten Schlüssel des Autors. Somit kann zusammen mit dem öffentlichen Teil des Schlüssels die Echtheit bestätigt werden.
 
+<!-- toc Inhalt -->
+
 ## Erzeugen eines GPG-Schlüssels
 
 Bevor ein Schlüssel zur Signierung verwendet werden kann, muss dieser natürlich erstellt werden.
