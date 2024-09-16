@@ -5,6 +5,7 @@ author:
   link: https://crycode.de
 banner: banner.webp
 date: 2024-09-16 13:00:00
+updated: 2024-09-16 20:49:00
 categories:
   - [Linux]
   - [Software]
@@ -12,6 +13,8 @@ tags:
   - Git
   - Versionierung
   - Signierung
+abbr:
+  WSL: Windows Subsystem for Linux
 ---
 
 Wer mit der Versionierungssoftware [Git](https://git-scm.com/) arbeitet und beispielsweise auf [GitHub](https://github.com/crycode-de) unterwegs ist, hat bestimmt schon mal das grüne Label *Verified* bei den Commits, oder auch Tags gesehen.
@@ -171,3 +174,25 @@ Im unteren Abschnitt *GPG Keys* fügen wir dann über den Button *New GPG key* u
 Als *Title* empfehle ich hier einen aussagekräftigen Titel, über den man später direkt weiß zu welchem Rechner dieser Schlüssel gehört.
 
 Über den Button *Add GPG key* wird der Schlüssel schließlich gespeichert und von nun an kann GitHub darüber verifizieren, dass unsere Commits wirklich von uns stammen. 😎
+
+## Mögliche Fehler und Lösungen
+
+Gelegentlich (besonders beim Einsatz von {% abbr WSL %}) kommt es dazu, dass die Signierung des Commits mit folgender Fehlermeldung fehl schlägt:
+
+```plain
+error: gpg failed to sign the data
+fatal: failed to write commit object
+```
+
+Dies liegt oftmals daran, dass GPG nicht weiß, wo es nach dem Passwort für den Schlüssel fragen soll.
+
+Abhilfe schafft hier dann `export GPG_TTY=$(tty)` in dem Terminal aufzurufen, womit wir GPG über eine Umgebungsvariable mitteilen, was das aktuelle Terminal ist.
+
+Damit wir dies nicht immer händisch machen müssen, können wir diesen Befehl auch der `.bashrc` Datei hinzufügen, sodass er bei jedem neuen Terminal automatisch aufgerufen wird:
+
+```sh Befehl zur .bashrc hinzufügen
+echo 'export GPG_TTY=$(tty)' >> ~/.bashrc
+```
+
+Ein weiterer Grund für diesen Fehler kann ein zu kleines Terminal sein.  
+Damit GPG nach dem Passwort fragen kann, muss das Terminal mindestens 12 Zeilen hoch sein. Andernfalls bricht der Vorgang mit genau dieser Fehlermeldung ab.
