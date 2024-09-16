@@ -4,7 +4,7 @@ author:
   name: Peter Müller
   link: https://crycode.de
 banner: banner.webp
-date: 2024-09-16 11:45:41
+date: 2024-09-16 13:00:00
 categories:
   - [Linux]
   - [Software]
@@ -14,9 +14,9 @@ tags:
   - Signierung
 ---
 
-Wer mit der Versionierungssoftware [Git](https://git-scm.com/) arbeitet und beispielsweise auf [GitHub](https://github.com/crycode-de) unterwegs ist, hat bestimmt schon mal das grüne Label *verified* bei den Commits, oder auch Tags gesehen.
+Wer mit der Versionierungssoftware [Git](https://git-scm.com/) arbeitet und beispielsweise auf [GitHub](https://github.com/crycode-de) unterwegs ist, hat bestimmt schon mal das grüne Label *Verified* bei den Commits, oder auch Tags gesehen.
 
-*TODO: Screenshot*
+{% img verified-commit.webp Commit mit Verified Label %}
 
 Damit wird angezeigt, dass der im Commit angegebene Autor auch wirklich derjenige ist, für den er sich ausgibt.  
 Theoretisch könnte man nämlich beliebigen Text in das Autor-Feld eines Commits rein schreiben.
@@ -130,7 +130,14 @@ Um sich in `git log` die Signaturen anzeigen zu lassen, nutzen wir den `--show-s
 ```sh Git Log mit Signaturen
 git log --show-signature
 
+commit 1170922d140ead4a3b6b3c853c3798b597636788 (HEAD -> main, origin/main)
+gpg: Signatur vom Mo 16 Sep 2024 13:12:51 CEST
+gpg:                mittels RSA-Schlüssel 81332766E9CA0C6DB43E1748E364C931CCF15D63
+gpg: Korrekte Signatur von "Peter Müller <peter@crycode.de>" [ultimativ]
+Author: Peter Müller <peter@crycode.de>
+Date:   Mon Sep 16 13:12:41 2024 +0200
 
+    Post: Commits und Tags in Git signieren
 ```
 
 > [!NOTE]
