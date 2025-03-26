@@ -1,7 +1,7 @@
 ---
 title: Serielle Schnittstelle über Ethernet
 date: 2022-01-10 12:00:00
-updated: 2024-03-31 16:00:00
+updated: 2025-03-26 13:55:00
 author:
   name: Peter Müller
   link: https://crycode.de
@@ -63,6 +63,9 @@ Wichtig sind hierbei die korrekte Baudrate (hier `b9600`), die später genutzt w
 Über `mode=770` wird die Schnittstelle dem Eigentümer und der Gruppe zugänglich gemacht.
 Eigentümer und Gruppe sind in diesem Fall davon abhängig, welcher Benutzer der `socat`-Prozess startet.
 Soll die Schnittstelle von jedem Nutzer des Systems verwendet werden dürfen, so müsste `mode=777` gesetzt werden.
+
+> [!CAUTION]
+> Wenn `socat` nicht unter dem _root_-Nutzer ausgeführt wird (was man aus Sicherheitsgründen auch vermeiden sollte), dann darf der `link` nicht unter `/dev/` angelegt werden, sondern muss in einem Verzeichnis sein, wo der entsprechende Nutzer Schreibrechte hat.
 
 Diverse andere Anleitungen nutzen beim `tcp-l` zudem noch die Option `fork`, was den Server auch bei einem Verbindungsabbruch weiterlaufen lassen würde. Problem hierbei ist jedoch, dass der Link dabei entfernt wird. Ich lasse diese Option deshalb lieber weg und lasse vom SystemD den entsprechenden Service (siehe weiter unten) nach einem Verbindungsabbruch einfach neu starten.
 
