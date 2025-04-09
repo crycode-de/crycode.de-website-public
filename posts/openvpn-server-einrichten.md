@@ -5,7 +5,7 @@ author:
   link: https://crycode.de
 #banner: banner.webp
 date: 2017-03-19 12:00:00
-updated: 2024-07-03 17:55:00
+updated: 2025-04-09 09:00:00
 categories:
   - [Linux]
   - [Netzwerk]
@@ -36,9 +36,9 @@ sudo apt install openvpn
 
 cd /etc/openvpn
 
-sudo wget https://github.com/OpenVPN/easy-rsa/releases/download/v3.1.7/EasyRSA-3.1.7.tgz
-sudo tar -xf EasyRSA-3.1.7.tgz
-sudo mv EasyRSA-3.1.7 easyrsa3
+sudo wget https://github.com/OpenVPN/easy-rsa/releases/download/v3.2.2/EasyRSA-3.2.2.tgz
+sudo tar -xf EasyRSA-3.2.2.tgz
+sudo mv EasyRSA-3.2.2 easyrsa3
 ```
 
 Zur Erhöhung der Sicherheit legen wir auf unserem Server zusätzlich einen neuen Benutzer und eine neue Gruppe für den OpenVPN Server an. Diese werden dem Server später über die Config mitgeteilt.
