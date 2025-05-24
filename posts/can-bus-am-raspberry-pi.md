@@ -5,7 +5,7 @@ author:
   link: https://crycode.de
 banner: banner.webp
 date: 2019-08-29 12:00:00
-updated: 2024-04-25 18:00:00
+updated: 2025-05-24 21:24:00
 categories:
   - [Raspberry Pi]
   - [HomePi]
@@ -133,7 +133,35 @@ ip link show type can
 
 ## Automatisches Aktivieren des Interfaces beim Systemstart
 
-Damit das `can0` Interface beim Systemstart automatisch aktiviert wird, müssen die folgenden Einträge in der Datei `/etc/network/interfaces` hinzugefügt werden. Dies funktioniert auch dann, wenn die "normalen" Netzwerkinterfaces vom *NetworkManager* oder *dhcpcd* verwaltet werden.
+Damit das `can0` Interface beim Systemstart automatisch aktiviert wird, muss ein SystemD Oneshot Service unter `/etc/systemd/system/setup-can0.service` erstellt werden. Dieser Service wird dann beim Booten des Systems einmalig ausgeführt und aktiviert das Interface mit der gewünschten Bitrate.
+
+```ini SystemD Oneshot Service &#47;etc/systemd/system/setup-can0.service
+[Unit]
+Description=Setup can0
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/ip link set can0 up type can bitrate 500000
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Die *500000* ist hierbei wieder die zu verwendende Bitrate.
+
+Anschließend muss der Service aktiviert werden, damit er beim Systemstart ausgeführt wird:
+
+```sh Service aktivieren
+sudo systemctl daemon-reload
+sudo systemctl enable setup-can0.service
+```
+
+<details>
+<summary>Auf älteren Systemen</summary>
+
+Auf älteren Systemen können die folgenden Einträge in der Datei `/etc/network/interfaces` hinzugefügt werden. Dies funktioniert auch dann, wenn die "normalen" Netzwerkinterfaces vom *NetworkManager* oder *dhcpcd* verwaltet werden.
 
 ```ini CAN-Bus Einträge in &#47;etc/network/interfaces
 # CAN-Bus
@@ -142,7 +170,7 @@ iface can0 can static
   bitrate 500000
 ```
 
-Die *500000* ist hierbei wieder die zu verwendende Bitrate.
+</details>
 
 ## Testen des CAN-Bus
 
