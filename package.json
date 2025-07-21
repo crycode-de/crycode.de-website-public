@@ -21,7 +21,7 @@
   },
   "homepage": "https://crycode.de",
   "dependencies": {
-    "glob": "^10.3.12",
-    "markdownlint": "^0.34.0"
+    "glob": "^11.0.3",
+    "markdownlint": "^0.38.0"
   }
 }
