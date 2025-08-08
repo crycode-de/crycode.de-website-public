@@ -8,16 +8,16 @@
  */
 
 import { globSync } from 'glob';
-import markdownlint from 'markdownlint';
+import { readConfig, lint } from 'markdownlint/sync';
 
-const config = markdownlint.readConfigSync('.markdownlint.json');
+const config = readConfig('.markdownlint.json');
 
 const files = globSync([
   'posts/*.md',
   'drafts/*.md',
 ]);
 
-/** @type {markdownlint.Options} */
+/** @type {import('markdownlint').Options} */
 const options = {
   config,
   files,
@@ -25,7 +25,7 @@ const options = {
 
 console.log('Linting markdown files in posts and drafts ...\n');
 
-const results = markdownlint.sync(options);
+const results = lint(options);
 
 let postsErrorCount = 0;
 let draftsErrorCount = 0;
