@@ -131,6 +131,10 @@ autologin-user-timeout = 10
 `username` muss durch den tatsächlichen Benutzernamen ersetzt werden, mit dem der automatische Login erfolgen soll.
 Der Timeout von 10 Sekunden sorgt dafür, dass der automatische Login nicht sofort erfolgt, sondern eine kurze Verzögerung hat. Das ist nützlich, falls man sich mal mit einem anderen Nutzer anmelden möchte.
 
+> [!NOTE]
+> Zusätzlich zum Autoslogin sollte noch das automatische Ausschalten des Bildschirms deaktiviert werden, damit der virtuelle Bildschirm nicht bei Inaktivität abgeschaltet wird. Dies führt sonst nämlich dazu, dass man in Moonlight später nur einen schwarzen Bildschirm sieht.
+> Bei *XFCE* kann dies in den *Einstellungen* unter *Energieverwaltung* -> *Bildschirm* deaktiviert werden.
+
 Für den Autostart von Sunshine erstellen wir eine `.desktop`-Datei im Autostart-Verzeichnis des Benutzers:
 
 ```sh Sunshine Autostart-Datei erstellen
