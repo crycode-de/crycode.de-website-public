@@ -5,6 +5,7 @@ author:
   link: https://crycode.de
 banner: banner.webp
 date: 2025-08-11 20:40:00
+updated: 2025-08-12 11:00:00
 categories:
   - [Linux]
   - [Software]
@@ -121,19 +122,24 @@ Nach der Autorisierung sollte die Verbindung zur VM hergestellt werden können u
 
 Damit beim Start der VM Sunshine automatisch gestartet wird und wir uns direkt verbinden können, aktivieren wir zunächst den automatischen Login in der VM.
 
-Da wir *XFCE* zusammen mit *LightDM* nutzen, passen wir die Datei `/etc/lightdm/lightdm.conf` an und fügen die folgenden Zeilen im Abschnitt `[Seat:*]` hinzu:
+Da wir *XFCE* zusammen mit *LightDM* nutzen, erstellen wir die Datei `/etc/lightdm/lightdm.conf.d/90-autologin.conf` mit folgendem Inhalt:
 
-```ini /etc/lightdm/lightdm.conf
+```sh
+sudo mkdir -p /etc/lightdm/lightdm.conf.d
+sudo nano /etc/lightdm/lightdm.conf.d/90-autologin.conf
+```
+
+```ini /etc/lightdm/lightdm.conf.d/90-autologin.conf
+[Seat:*]
+# autologin
 autologin-user = username
 autologin-user-timeout = 10
+# disable screen blanking on login screen
+xserver-command=X -s 0 -dpms
 ```
 
 `username` muss durch den tatsächlichen Benutzernamen ersetzt werden, mit dem der automatische Login erfolgen soll.
 Der Timeout von 10 Sekunden sorgt dafür, dass der automatische Login nicht sofort erfolgt, sondern eine kurze Verzögerung hat. Das ist nützlich, falls man sich mal mit einem anderen Nutzer anmelden möchte.
-
-> [!NOTE]
-> Zusätzlich zum Autoslogin sollte noch das automatische Ausschalten des Bildschirms deaktiviert werden, damit der virtuelle Bildschirm nicht bei Inaktivität abgeschaltet wird. Dies führt sonst nämlich dazu, dass man in Moonlight später nur einen schwarzen Bildschirm sieht.
-> Bei *XFCE* kann dies in den *Einstellungen* unter *Energieverwaltung* -> *Bildschirm* deaktiviert werden.
 
 Für den Autostart von Sunshine erstellen wir eine `.desktop`-Datei im Autostart-Verzeichnis des Benutzers:
 
@@ -148,6 +154,21 @@ NoDisplay=false
 X-GNOME-Autostart-enabled=true
 Name=Sunshine
 Comment=Start Sunshine Remote Desktop
+EOF
+```
+
+> [!NOTE]
+> Zusätzlich zum Autologin sollte noch das automatische Ausschalten des Displays deaktiviert werden, damit der virtuelle Bildschirm nicht bei Inaktivität abgeschaltet wird. Dies führt sonst nämlich dazu, dass man in Moonlight später nur einen schwarzen Bildschirm sieht.
+
+Dazu erstellen wir noch eine zweite `.desktop`-Datei, die DPMS (Display Power Management Signaling) und den Bildschirmschoner deaktiviert:
+
+```sh Autostart-Datei für DPMS erstellen
+cat <<EOF > ~/.config/autostart/disable-dpms.desktop
+[Desktop Entry]
+Type=Application
+Exec=/usr/bin/xset s off -dpms s noblank
+Name=DPMS und Bildschirmschoner deaktivieren
+X-GNOME-Autostart-enabled=true
 EOF
 ```
 
