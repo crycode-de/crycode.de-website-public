@@ -13,7 +13,7 @@ tags:
   - Emulation
   - WSL
 date: 2024-06-08 07:50:27
-updated: 2024-09-05 12:59:00
+updated: 2026-01-01 12:00:00
 ---
 
 
@@ -27,7 +27,7 @@ Hierfür nutzen wir ein aktuelles Ubuntu-System (24.04) und die freie Virtualisi
 
 > [!NOTE]
 > Wir emulieren hier ein laufendes Raspberry Pi OS in einer virtuellen QEMU ARM Umgebung.  
-> Da dies eine vollständige Hardware-Emulation ist, sind möglicherweise nicht alle Hardware-Features des echten Raspberry Pi verfügbar.
+> Da dies keine vollständige Hardware-Emulation ist, sind möglicherweise nicht alle Hardware-Features des echten Raspberry Pi verfügbar.
 
 <!-- toc Inhalt -->
 
